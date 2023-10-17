@@ -11,11 +11,13 @@ public class ExpenseTrackerApp {
 
   public static void main(String[] args) {
     
-    // Create MVC components
     ExpenseTrackerModel model = new ExpenseTrackerModel();
     ExpenseTrackerView view = new ExpenseTrackerView();
     ExpenseTrackerController controller = new ExpenseTrackerController(model, view);
-
+    
+    // Pass the controller to the view
+    view.setController(controller);
+    
     // Initialize view
     view.setVisible(true);
 
