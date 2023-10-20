@@ -3,6 +3,8 @@ package model;
 import java.util.ArrayList;
 import java.util.List;
 
+import controller.InputValidation;
+
 public class AmountFilter implements TransactionFilter {
     private double minAmount;
     private double maxAmount;
@@ -10,6 +12,12 @@ public class AmountFilter implements TransactionFilter {
     public AmountFilter(double minAmount, double maxAmount) {
         this.minAmount = minAmount;
         this.maxAmount = maxAmount;
+    }
+        public boolean inputValidation() {
+        if (!InputValidation.isValidAmount(minAmount) && !InputValidation.isValidAmount(maxAmount)) {
+            return false;
+        }
+        return true;
     }
 
     @Override

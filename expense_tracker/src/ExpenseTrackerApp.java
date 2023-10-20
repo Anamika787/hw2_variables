@@ -11,9 +11,9 @@ public class ExpenseTrackerApp {
 
   public static void main(String[] args) {
     
-    ExpenseTrackerModel model = new ExpenseTrackerModel();
+    ExpenseTrackerModel model1 = new ExpenseTrackerModel();
     ExpenseTrackerView view = new ExpenseTrackerView();
-    ExpenseTrackerController controller = new ExpenseTrackerController(model, view);
+    ExpenseTrackerController controller = new ExpenseTrackerController(model1, view);
     
     // Pass the controller to the view
     view.setController(controller);

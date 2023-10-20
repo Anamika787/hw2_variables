@@ -2,8 +2,8 @@ package model;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
-public class Transaction {
+//made final to prevent subclassing
+public final class Transaction {
 
   private final double amount;
   private final String category;
@@ -22,7 +22,7 @@ public class Transaction {
   public String getCategory() {
     return category;
   }
-
+//removed the setter method
   public String getTimestamp() {
     return timestamp;
   }
